@@ -1,0 +1,11 @@
+autogen-agentchat>=0.7.0
+autogen-ext[openai]>=0.7.0
+autogen-core>=0.7.0
+
+# ── Observability & Evaluation ──────────────────────────────
+# LangSmith: tracing (@traceable) + evaluation (evaluate()).
+# Install separately; traces/eval gracefully no-op if missing.
+#   export LANGCHAIN_TRACING_V2=true
+#   export LANGCHAIN_API_KEY=lsv2_...
+# ────────────────────────────────────────────────────────────
+langsmith>=0.1.0

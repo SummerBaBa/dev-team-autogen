@@ -1,0 +1,43 @@
+{
+  "title": "AutoGen Multi-Agent Dev Team",
+  "subtitle": "多Agent协作安全开发流水线",
+  "tags": ["AutoGen", "Multi-Agent", "LLM", "AI Safety", "Python", "Guardrails"],
+  "role": "AI Agent Engineer",
+  "summary": "基于 Microsoft AutoGen 0.7 构建的多Agent协作系统，模拟软件开发团队（PM → Developer → QA）的端到端流水线。配备三层安全护栏（输入/输出/流程）和完整的评估追踪体系，是AI Agent工程化的参考实现。",
+  "highlights": [
+    "三层安全护栏系统：提示注入检测、有害代码过滤、审计追踪",
+    "完整评估体系：Metrics + Tracing + Benchmark",
+    "多模型支持：PM/QA 使用 Qwen3-8B，Developer 使用 DeepSeek-V4-Flash",
+    "可插拔架构：Agent 工厂模式，框架无关的核心设计"
+  ],
+  "tech_stack": {
+    "framework": "AutoGen 0.7",
+    "language": "Python 3.10+",
+    "models": ["Qwen3-8B-MLX-4bit", "Qwen3.8-27B-MLX-4bit"],
+    "tools": ["asyncio", "dataclasses", "regex"],
+    "concepts": ["Multi-Agent", "Guardrails", "RAG", "ReAct", "HITL"]
+  },
+  "architecture": {
+    "agents": ["PM", "Developer", "Fixer", "QA"],
+    "pipeline": "需求 → [Input Guard] → PM(PRD) → Dev(Code) → QA(Report) → Fix(Fixed) → QA(Regression)",
+    "guardrails": ["InputGuard", "OutputGuard", "FlowGuard"],
+    "evaluation": ["MetricsTracker", "TraceLogger", "BenchmarkRunner"]
+  },
+  "features": [
+    "多Agent顺序协作流水线",
+    "正则表达式提示注入检测",
+    "敏感话题关键词过滤",
+    "危险代码/密钥泄露检测",
+    "全流程审计日志",
+    "连续失败熔断",
+    "性能指标追踪",
+    "结构化调用链追踪",
+    "多需求 Benchmark 自动评估"
+  ],
+  "usage": "python main.py '你的产品需求描述'",
+  "related_projects": [
+    "../dev-team-crew/",
+    "../react_agent/",
+    "../pdf_chat_agent/"
+  ]
+}
